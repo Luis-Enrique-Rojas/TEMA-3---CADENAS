@@ -1,0 +1,55 @@
+program T3E01;
+
+{$mode objfpc}{$H+}
+uses
+  {$IFDEF UNIX}
+  cthreads,
+  {$ENDIF}
+  Classes, uejercicio3
+  { you can add units after this };
+var
+  p:TEjercicio3;
+  cade:string;
+  car:char;
+  pos:integer;
+begin
+  p:=TEjercicio3.crear(); //inicializar
+  //E1
+  writeln('**Ejercicio #1**');
+  write('Digite Cadena : ');
+  readln(cade);        //'Facultad de Ingenieria'
+  writeln('La Cantidad de Espacioes es : ',p.contarEspacios());
+  //E2
+  writeln('**Ejercicio #2**');
+  write('Digite Caracter : ');
+  readln(car);
+  p.posicionAscii(car);    //Antes o Despues de la <g>
+  //E3
+  writeln('**Ejercicio #3**');
+  write('Digite Cadena : ');
+  readln(cade);          //'abc' o 'ABC'
+  p.setCad(cade);
+  if(p.cadOrdenada()) then
+  writeln(cade+' Esta Ordenado . . .')
+  else
+    writeln(cade+' No esta Ordenado . . .');
+  //E4
+  writeln('**Ejercicio #4**');
+  write('Digite Cadena : ');
+  readln(cade);        //'Facultad de Ingenieria'
+  p.setCad(cade);
+  write('Digite Posicion : ');
+  readln(pos);           //13
+  if(p.carI_M(pos))then
+  writeln('El Caracter <'+cade[pos]+'> Si esta entre <<I-M>> . . .')
+  else
+       writeln('El Caracter <'+cade[pos]+'> No esta entre <<I-M>> . . .');
+  //E5
+  writeln('**Ejercicio #5**');
+  write('Digite Cadena : ');
+  readln(cade);        //'Facultad de Ingenieria'
+  p.setCad(cade);
+  writeln('La Cantidad de Ies son : ',p.contarIes());
+  readln();
+end.
+
