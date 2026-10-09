@@ -1,0 +1,136 @@
+unit uconjunto;
+
+{$mode ObjFPC}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils;
+
+const
+  MAX_ELE=256;
+type
+
+  { TConjunto }
+
+  TConjunto=Class
+    private
+      elem:array[1..MAX_ELE]of char;
+      dim:integer;
+    public
+      constructor crear();
+      procedure setElem(pos:integer;ele:char);
+      function getElem(pos:integer):char;
+      procedure setDim(dime:integer);
+      function getDim():integer;
+      function pertenece(ele:char):boolean;
+      procedure agregar(ele:char);
+      procedure remover(ele:char);
+      procedure mostrar();        //CTRL+SHIFT+C
+  end;
+
+implementation
+
+{ TConjunto }
+
+constructor TConjunto.crear();
+var
+  pos:integer;
+begin
+  dim:=0;
+  for pos:=1 to MAX_ELE do
+  elem[pos]:=char(0); //NULL
+end;
+
+procedure TConjunto.setElem(pos: integer; ele: char);
+begin
+   if(pos>=1)AND(pos<=dim)then
+      elem[pos]:=ele
+      else
+        writeln('Posicion Fuera de Rango . . .');
+end;
+
+function TConjunto.getElem(pos: integer): char;
+begin
+   if(pos>=1)AND(pos<=dim)then
+      result:=elem[pos]
+      else
+        result:=char(0);  //NULL
+end;
+
+procedure TConjunto.setDim(dime: integer);
+begin
+   if(dime>=0)AND(dime<=MAX_ELE) then
+      dim:=dime
+      else
+        writeln('Dimension Fuera de Rango . . .');
+end;
+
+function TConjunto.getDim(): integer;
+begin
+ result:=dim;
+end;
+
+function TConjunto.pertenece(ele: char): boolean;
+var
+  sw:boolean;
+  pos:integer;
+begin
+   sw:=false;
+   pos:=1;
+   while(pos<=dim)AND(NOT sw) do   //Busqueda Secuencial
+      begin
+      if(elem[pos]=ele) then
+         sw:=true
+         else
+         pos:=pos+1;
+      end;
+   result:=sw;
+end;
+
+procedure TConjunto.agregar(ele: char);
+begin
+  if(dim<MAX_ELE) then //hay espacio?
+     begin
+        if(NOT pertenece(ele)) then //Elemento no esta en el conjunto
+           begin
+              dim:=dim+1;
+              elem[dim]:=ele;
+           end;
+     end;
+end;
+
+procedure TConjunto.remover(ele: char);
+var
+  sw:boolean;
+  pos,des:integer;
+begin
+   if(pertenece(ele)) then //si esta en el conjunto
+      begin
+      sw:=false;           //Busqueda Secuencial
+      pos:=1;
+      while (pos<=dim)AND(NOT sw) do
+         begin
+         if(elem[pos]=ele) then
+            sw:=true
+            else
+            pos:=pos+1;
+         end;
+      for des:=pos to dim-1 do  //Eliminar
+      elem[des]:= elem[des+1];
+      dim:=dim-1;
+      end;
+end;
+
+procedure TConjunto.mostrar();
+var
+  pos:integer;
+begin
+  writeln('{');
+  for pos:=1 to dim do
+  write(elem[pos],',');
+  writeln('}');
+end;
+
+end.
+

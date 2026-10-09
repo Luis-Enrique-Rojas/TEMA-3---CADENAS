@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="T3E02.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <TopLine Value="8"/>
+        <CursorPos X="41" Y="22"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uconjunto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="111"/>
+        <CursorPos X="8" Y="132"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="15">
+      <Position>
+        <Filename Value="uconjunto.pas"/>
+        <Caret Line="29" Column="49" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="uconjunto.pas"/>
+        <Caret Line="41" Column="9" TopLine="26"/>
+      </Position>
+      <Position>
+        <Filename Value="uconjunto.pas"/>
+        <Caret Line="18" Column="36" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="uconjunto.pas"/>
+        <Caret Line="38" Column="6" TopLine="26"/>
+      </Position>
+      <Position>
+        <Filename Value="uconjunto.pas"/>
+        <Caret Line="42" Column="28" TopLine="29"/>
+      </Position>
+      <Position>
+        <Filename Value="uconjunto.pas"/>
+        <Caret Line="58" Column="33" TopLine="38"/>
+      </Position>
+      <Position>
+        <Filename Value="uconjunto.pas"/>
+        <Caret Line="42" Column="13" TopLine="47"/>
+      </Position>
+      <Position>
+        <Filename Value="uconjunto.pas"/>
+        <Caret Line="71" Column="14" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="uconjunto.pas"/>
+        <Caret Line="85" Column="15" TopLine="62"/>
+      </Position>
+      <Position>
+        <Filename Value="uconjunto.pas"/>
+        <Caret Line="76" Column="14" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="uconjunto.pas"/>
+        <Caret Line="77" Column="15" TopLine="61"/>
+      </Position>
+      <Position>
+        <Filename Value="uconjunto.pas"/>
+        <Caret Line="84" Column="13" TopLine="72"/>
+      </Position>
+      <Position>
+        <Filename Value="uconjunto.pas"/>
+        <Caret Line="99" Column="16" TopLine="83"/>
+      </Position>
+      <Position>
+        <Filename Value="uconjunto.pas"/>
+        <Caret Line="105" Column="56" TopLine="83"/>
+      </Position>
+      <Position>
+        <Filename Value="uconjunto.pas"/>
+        <Caret Line="95" Column="31" TopLine="83"/>
+      </Position>
+      <Position>
+        <Filename Value="uconjunto.pas"/>
+        <Caret Line="121" Column="18" TopLine="101"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
